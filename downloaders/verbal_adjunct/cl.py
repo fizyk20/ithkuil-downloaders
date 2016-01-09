@@ -45,7 +45,7 @@ for row in result2[0].tr[1:]:
         session.add(morpheme)
         session.commit()
         
-    slot = session.query(ithSlot).filter(ithSlot.wordtype_id == 2 and ithSlot.name == 'Cl').first()
+    slot = session.query(ithSlot).filter(ithSlot.wordtype_id == 2).filter(ithSlot.name == 'Cl').first()
     value = session.query(ithCategValue).filter(ithCategValue.code == code).first()
     
     newMorphSlot = ithMorphemeSlot(morpheme = morpheme, slot = slot)

@@ -40,7 +40,7 @@ for row in result2[0].tr[1:16]:
     morph2 = row.td[7].__data__.replace(' ', '').split('/')
     
     category = session.query(ithCategory).filter(ithCategory.name == 'Modality').first()
-    slot = session.query(ithSlot).filter(ithSlot.wordtype_id == 2 and ithSlot.name == 'Vm').first()
+    slot = session.query(ithSlot).filter(ithSlot.wordtype_id == 2).filter(ithSlot.name == 'Vm').first()
     
     value1 = ithCategValue(category = category, code = code1, name = name1)
     session.add(value1)
@@ -87,7 +87,7 @@ name1 = row.td[3].__data__
 morph1 = row.td[4].__data__.replace(' ', '').split('/')
 
 category = session.query(ithCategory).filter(ithCategory.name == 'Modality').first()
-slot = session.query(ithSlot).filter(ithSlot.wordtype_id == 2 and ithSlot.name == 'Vm').first()
+slot = session.query(ithSlot).filter(ithSlot.wordtype_id == 2).filter(ithSlot.name == 'Vm').first()
 
 value1 = ithCategValue(category = category, code = code1, name = name1)
 session.add(value1)

@@ -37,7 +37,7 @@ for row in result2[0].tr[2:]:
     morph2 = row.td[3].__data__.replace('-', '').replace(' ', '').split('/')
     
     category = session.query(ithCategory).filter(ithCategory.name == 'Level').first()
-    slot = session.query(ithSlot).filter(ithSlot.wordtype_id == 2 and ithSlot.name == 'Ve').first()
+    slot = session.query(ithSlot).filter(ithSlot.wordtype_id == 2).filter(ithSlot.name == 'Ve').first()
     
     value1 = ithCategValue(category = category, code = code + 'r', name = name + ' relative')
     session.add(value1)

@@ -30,7 +30,7 @@ result2 = list(filter(test_table, parser.result))
 print('Filtered.')
 print('Reading data...')
             
-slot = session.query(ithSlot).filter(ithSlot.wordtype_id == 2 and ithSlot.name == 'Vs').first()
+slot = session.query(ithSlot).filter(ithSlot.wordtype_id == 2).filter(ithSlot.name == 'Vs').first()
 
 for row in result2[0].tr[4:]:
     code = row.td[1].__data__.replace(' ', '')

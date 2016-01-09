@@ -12,7 +12,7 @@ ext = {
     '^': 'GRA'
 }
 
-slot = session.query(ithSlot).filter(ithSlot.wordtype_id == 2 and ithSlot.name == '[tone]').first()
+slot = session.query(ithSlot).filter(ithSlot.wordtype_id == 2).filter(ithSlot.name == '[tone]').first()
 
 for morph, code in ext.items():
     
