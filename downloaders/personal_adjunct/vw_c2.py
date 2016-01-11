@@ -56,7 +56,7 @@ def add_value(atom, category, value):
         value = values[0]
     atom.values.append(value)
     
-vws = ['', 'ö', 'î', 'a', 'ü', 'o', 'e', 'u', 'ë']
+vws = ['', 'ö', 'i', 'a', 'ü', 'o', 'e', 'u', 'ë']
 vwvals = ['UNI', 'DPX', 'DCT', 'AGG', 'SEG', 'CPN', 'COH', 'CST', 'MLT']
 
 c2s = ['h', 'w', 'y', 'hw']
